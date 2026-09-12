@@ -48,7 +48,14 @@ DATA[MIX_TENSE] = [item for tense, items in DATA.items() if tense != MIX_TENSE f
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
-def pause(): input(f'\n{DIM}Appuie sur Entrée pour continuer…{RESET}')
+def read_input(prompt=''):
+    try:
+        return input(prompt)
+    except (KeyboardInterrupt, EOFError):
+        clear()
+        print(f'{GREEN}À bientôt — bon courage pour le français !{RESET}')
+        raise SystemExit
+def pause(): read_input(f'\n{DIM}Entrée : continuer  ·  Ctrl+C : quitter{RESET}')
 def normalize_answer(answer):
     return ' '.join(answer.lower().replace('’', "'").split())
 def title(sub=''): 
@@ -60,7 +67,7 @@ def choose_tense():
     print(f'{BOLD}{WHITE}Choisis un temps :{RESET}')
     for k,(name, use) in TENSES.items(): print(f'  {YELLOW}{k}{RESET}  {name:<25} {DIM}{use}{RESET}')
     while True:
-        x=input(f'\n{CYAN}› {RESET}').strip()
+        x=read_input(f'\n{CYAN}› {RESET}').strip()
         if x in TENSES: return TENSES[x][0]
         if x.lower() in ('q','0'): return None
         print(f'{RED}Choix invalide. Entre 1 et 6.{RESET}')
@@ -92,13 +99,14 @@ def quiz():
         print(f'{WHITE}Verbe à conjuguer : {BOLD}{verb}{RESET}')
         print(f'{DIM}Observe les indices dans la phrase et choisis la bonne terminaison.{RESET}')
         print(f'{WHITE}Phrase : {phrase.replace(answer, "_____")}{RESET}\n')
-        got=input(f'{CYAN}› Ta réponse : {RESET}').strip()
+        got=read_input(f'{CYAN}› Ta réponse (q : quitter) : {RESET}').strip()
+        if got.lower() == 'q': return
         if normalize_answer(got) == normalize_answer(answer):
             print(f'{GREEN}✓ Excellent !{RESET}'); score+=1
         else:
             print(f'{RED}✗ Réponse attendue : {BOLD}{answer}{RESET}')
             mistakes.append((verb, phrase, answer))
-        input(f'{DIM}Entrée pour la suite…{RESET}')
+        read_input(f'{DIM}Entrée : question suivante  ·  Ctrl+C : quitter{RESET}')
     title('Résultat')
     pct=score/total_questions
     color=GREEN if pct>=.75 else YELLOW if pct>=.5 else RED
@@ -123,7 +131,7 @@ def main():
         print(f'{BOLD}{WHITE}  2  {CYAN}Défi express{RESET}      répondre et recevoir une correction')
         print(f'{BOLD}{WHITE}  3  {CYAN}Banque de phrases{RESET} lire des exemples B2 naturels')
         print(f'{BOLD}{WHITE}  q  {DIM}Quitter{RESET}')
-        x=input(f'\n{CYAN}› {RESET}').strip().lower()
+        x=read_input(f'\n{CYAN}› {RESET}').strip().lower()
         if x=='1': lesson()
         elif x=='2': quiz()
         elif x=='3': phrases()
