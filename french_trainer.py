@@ -97,7 +97,6 @@ def quiz():
     for i,(verb, pron, answer, phrase) in enumerate(questions,1):
         title(f'Exercice  ·  question {i}/{total_questions}  ·  score {score}')
         print(f'{WHITE}Verbe à conjuguer : {BOLD}{verb}{RESET}')
-        print(f'{DIM}Observe les indices dans la phrase et choisis la bonne terminaison.{RESET}')
         print(f'{WHITE}Phrase : {phrase.replace(answer, "_____")}{RESET}\n')
         got=read_input(f'{CYAN}› Ta réponse (q : quitter) : {RESET}').strip()
         if got.lower() == 'q': return
