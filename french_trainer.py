@@ -22,6 +22,14 @@ DATA = {
   ('tenir', 'vous', 'tenez', 'Vous tenez compte des contraintes avant de proposer une solution réaliste.'),
   ('atteindre', 'on', 'atteint', 'On atteint plus facilement ses objectifs quand on mesure régulièrement ses progrès.'),
   ('défendre', 'ils', 'défendent', 'Ils défendent leur point de vue tout en restant ouverts au dialogue.'),
+  ('obtenir', 'je', 'obtiens', 'J’obtiens de meilleurs résultats lorsque je planifie chaque étape du travail.'),
+  ('conduire', 'elle', 'conduit', 'Elle conduit les négociations avec calme et fermeté.'),
+  ('répondre', 'vous', 'répondez', 'Vous répondez aux critiques sans perdre de vue l’objectif principal.'),
+  ('offrir', 'on', 'offre', 'On offre davantage de possibilités aux étudiants qui s’investissent.'),
+  ('suivre', 'nous', 'suivons', 'Nous suivons l’évolution du dossier grâce à un tableau de bord partagé.'),
+  ('reconnaître', 'ils', 'reconnaissent', 'Ils reconnaissent volontiers leurs limites et demandent un avis extérieur.'),
+  ('soutenir', 'tu', 'soutiens', 'Tu soutiens cette proposition parce qu’elle répond aux besoins du terrain.'),
+  ('s’apercevoir', 'je', 'm’aperçois', 'Je m’aperçois que les détails changent souvent le sens d’un argument.'),
  ],
  'Passé composé': [
   ('réussir', 'elle', 'a réussi', 'Elle a réussi à convaincre le comité grâce à des arguments précis.'),
@@ -32,6 +40,14 @@ DATA = {
   ('prendre', 'il', 'a pris', 'Il a pris la parole pour rappeler les enjeux essentiels du débat.'),
   ('naître', 'elles', 'sont nées', 'Elles sont nées dans cette région, mais ont vécu à l’étranger pendant plusieurs années.'),
   ('comprendre', 'vous', 'avez compris', 'Vous avez compris la situation dès que les premiers résultats sont arrivés.'),
+  ('prendre', 'elle', 'a pris', 'Elle a pris une décision difficile après avoir consulté toute son équipe.'),
+  ('ouvrir', 'ils', 'ont ouvert', 'Ils ont ouvert le débat à des participants qui n’étaient pas d’accord.'),
+  ('partir', 'nous', 'sommes partis', 'Nous sommes partis avant l’aube afin d’éviter les embouteillages.'),
+  ('lire', 'tu', 'as lu', 'Tu as lu les conditions attentivement avant de signer le contrat.'),
+  ('perdre', 'il', 'a perdu', 'Il a perdu confiance après plusieurs promesses non tenues.'),
+  ('se rendre', 'elles', 'se sont rendues', 'Elles se sont rendues sur place pour évaluer les dégâts.'),
+  ('voir', 'j’', 'ai vu', 'J’ai vu à quel point cette expérience avait changé sa manière de travailler.'),
+  ('apprendre', 'vous', 'avez appris', 'Vous avez appris la nouvelle par un collègue qui était présent à la réunion.'),
  ],
  'Imparfait': [
   ('lire', 'vous', 'lisiez', 'À cette époque, vous lisiez beaucoup pour préparer votre concours.'),
@@ -42,6 +58,14 @@ DATA = {
   ('attendre', 'nous', 'attendions', 'Nous attendions une réponse officielle lorsque la nouvelle est tombée.'),
   ('vivre', 'ils', 'vivaient', 'Ils vivaient modestement, mais ils accordaient beaucoup de valeur à leur liberté.'),
   ('devoir', 'tu', 'devais', 'Tu devais souvent adapter ton discours selon les personnes présentes.'),
+  ('sembler', 'cela', 'semblait', 'Cela semblait impossible jusqu’à ce qu’une solution simple apparaisse.'),
+  ('pleuvoir', 'il', 'pleuvait', 'Il pleuvait depuis des heures quand le train est finalement arrivé.'),
+  ('préparer', 'nous', 'préparions', 'Nous préparions une présentation lorsque le directeur nous a interrompus.'),
+  ('connaître', 'elle', 'connaissait', 'Elle connaissait déjà les lieux grâce à plusieurs séjours précédents.'),
+  ('vouloir', 'ils', 'voulaient', 'Ils voulaient changer de méthode, mais ils manquaient encore de recul.'),
+  ('falloir', 'il', 'fallait', 'Il fallait agir rapidement pour limiter les conséquences de la panne.'),
+  ('dire', 'je', 'disais', 'Je disais toujours la même chose : la clarté évite bien des malentendus.'),
+  ('grandir', 'vous', 'grandissiez', 'Vous grandissiez dans un environnement où l’on valorisait la curiosité.'),
  ],
  'Futur simple': [
   ('voir', 'tu', 'verras', 'Tu verras rapidement les progrès si tu pratiques un peu chaque jour.'),
@@ -52,6 +76,14 @@ DATA = {
   ('recevoir', 'vous', 'recevrez', 'Vous recevrez une confirmation automatique après l’enregistrement de votre demande.'),
   ('suffire', 'cela', 'suffira', 'Cela suffira pour lancer la première étape du projet dès lundi.'),
   ('devenir', 'ils', 'deviendront', 'Ils deviendront progressivement autonomes grâce à cet accompagnement.'),
+  ('pouvoir', 'elle', 'pourra', 'Elle pourra commencer dès que les autorisations nécessaires seront accordées.'),
+  ('faire', 'nous', 'ferons', 'Nous ferons le point sur les résultats au début du mois prochain.'),
+  ('savoir', 'tu', 'sauras', 'Tu sauras bientôt si ta candidature a été retenue.'),
+  ('tenir', 'je', 'tiendrai', 'Je tiendrai compte de vos remarques dans la prochaine version du document.'),
+  ('prendre', 'vous', 'prendrez', 'Vous prendrez connaissance du rapport avant la séance de jeudi.'),
+  ('falloir', 'il', 'faudra', 'Il faudra prévoir une marge de sécurité en cas de retard.'),
+  ('mourir', 'la tradition', 'mourra', 'La tradition ne mourra pas si les nouvelles générations se l’approprient.'),
+  ('courir', 'ils', 'courront', 'Ils courront le risque de perdre leur avantage s’ils attendent trop longtemps.'),
  ],
  'Conditionnel présent': [
   ('pouvoir', 'je', 'pourrais', 'Je pourrais vous aider davantage si vous me donniez un peu plus de contexte.'),
@@ -62,6 +94,14 @@ DATA = {
   ('accepter', 'nous', 'accepterions', 'Nous accepterions cette proposition si les conditions étaient clairement définies.'),
   ('être', 'vous', 'seriez', 'Vous seriez plus convaincant en illustrant votre argument par un exemple concret.'),
   ('dire', 'ils', 'diraient', 'Ils diraient la vérité s’ils se sentaient réellement écoutés.'),
+  ('accompagner', 'je', 'accompagnerais', 'J’accompagnerais volontiers ce changement s’il était mieux expliqué.'),
+  ('pouvoir', 'vous', 'pourriez', 'Vous pourriez reformuler votre demande pour éviter toute ambiguïté.'),
+  ('falloir', 'il', 'faudrait', 'Il faudrait également consulter les personnes directement concernées.'),
+  ('avoir', 'nous', 'aurions', 'Nous aurions davantage de choix si le budget était plus flexible.'),
+  ('venir', 'elle', 'viendrait', 'Elle viendrait avec plaisir si son emploi du temps le permettait.'),
+  ('prendre', 'tu', 'prendrais', 'Tu prendrais moins de risques en vérifiant cette information à la source.'),
+  ('savoir', 'ils', 'sauraient', 'Ils sauraient comment réagir s’ils avaient reçu une formation adaptée.'),
+  ('vivre', 'on', 'vivrait', 'On vivrait mieux avec des horaires plus compatibles avec les transports.'),
  ],
 }
 DATA[MIX_TENSE] = [item for tense, items in DATA.items() if tense != MIX_TENSE for item in items]
@@ -112,7 +152,7 @@ def quiz():
     if tense == MIX_TENSE:
         mixed_pool = [item for name, items in DATA.items()
                       if name != MIX_TENSE for item in items]
-        questions = random.sample(mixed_pool, 8)
+        questions = random.sample(mixed_pool, 12)
     else:
         questions = list(DATA[tense])
     random.shuffle(questions); score=0; streak=0; mistakes=[]
