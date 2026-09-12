@@ -192,7 +192,7 @@ def quiz():
     if tense == MIX_TENSE:
         mixed_pool = [item for name, items in DATA.items()
                       if name != MIX_TENSE for item in items]
-        questions = random.sample(mixed_pool, 12)
+        questions = random.sample(mixed_pool, 20)
     else:
         questions = list(DATA[tense])
     random.shuffle(questions); score=0; streak=0; mistakes=[]
