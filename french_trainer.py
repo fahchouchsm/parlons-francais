@@ -78,6 +78,9 @@ def read_input(prompt=''):
 def pause(): read_input(f'\n{DIM}Entrée : continuer  ·  Ctrl+C : quitter{RESET}')
 def normalize_answer(answer):
     return ' '.join(answer.lower().replace('’', "'").split())
+def answer_hint(answer):
+    words = answer.split()
+    return ' '.join(word[0] + '·' * max(1, len(word) - 1) for word in words)
 def title(sub=''): 
     clear(); w=min(shutil.get_terminal_size((80,20)).columns, 92); line='━'*w
     print(f'{CYAN}{line}{RESET}\n{BOLD}{YELLOW}   PARLONS FRANÇAIS{RESET}  {DIM}│ Atelier de conjugaison · niveau B2{RESET}')
@@ -112,19 +115,22 @@ def quiz():
         questions = random.sample(mixed_pool, 8)
     else:
         questions = list(DATA[tense])
-    random.shuffle(questions); score=0; mistakes=[]
+    random.shuffle(questions); score=0; streak=0; mistakes=[]
     total_questions = len(questions)
     for i,(verb, pron, answer, phrase) in enumerate(questions,1):
-        title(f'Exercice  ·  question {i}/{total_questions}  ·  score {score}')
+        title(f'Exercice  ·  question {i}/{total_questions}  ·  score {score}  ·  série {streak}')
         print(f'{WHITE}Verbe à conjuguer : {BOLD}{verb}{RESET}')
         print(f'{WHITE}Phrase : {phrase.replace(answer, "_____")}{RESET}\n')
-        got=read_input(f'{CYAN}› Ta réponse (q : quitter) : {RESET}').strip()
+        got=read_input(f'{CYAN}› Ta réponse (? : indice · q : quitter) : {RESET}').strip()
+        if got == '?':
+            print(f'{YELLOW}Indice : {answer_hint(answer)}{RESET}')
+            got=read_input(f'{CYAN}› Ta réponse : {RESET}').strip()
         if got.lower() == 'q': return
         if normalize_answer(got) == normalize_answer(answer):
-            print(f'{GREEN}✓ Excellent !{RESET}'); score+=1
+            print(f'{GREEN}✓ Excellent !{RESET}'); score+=1; streak+=1
         else:
             print(f'{RED}✗ Réponse attendue : {BOLD}{answer}{RESET}')
-            mistakes.append((verb, phrase, answer))
+            mistakes.append((verb, phrase, answer)); streak=0
         read_input(f'{DIM}Entrée : question suivante  ·  Ctrl+C : quitter{RESET}')
     title('Résultat')
     pct=score/total_questions
